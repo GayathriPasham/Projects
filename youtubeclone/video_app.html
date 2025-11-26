@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <link rel="stylesheet" href="video.js"/> -->
+
+    <title>video-app</title>
+  </head>
+  <body>
+    <div class="child">
+      <div class="child-1">
+        <i class="material-icons" id="menu-icon">menu</i>
+        <img
+          src="https://signal23.tv/wp-content/uploads/2020/03/youtube-logo.jpg"
+          width="60px"
+          height="30px"
+        />
+      </div>
+      <div class="child-2" >
+        <input type="text" placeholder="search" id="search-input" />
+        <button id="search-btn"><i class="material-icons">search</i></button>
+      </div>
+      <div class="child-3">
+        <i class="material-icons">videocam</i>
+        <i class="material-icons">apps</i>
+        <i class="material-icons">notifications</i>
+        <i class="material-icons">account_circle</i>
+      </div>
+    </div>
+    <!-- sidebar starts -->
+    <div class="mainBody">
+      <div class="sidebar">
+        <div class="sidebar__categories">
+          <div class="sidebar_category">
+            <i class="material-icons">home</i>
+            <span>Home</span>
+          </div>
+          <div class="sidebar_category">
+            <i class="material-icons">local_fire_department</i>
+            <span>Trending</span>
+          </div>
+          <div class="sidebar_category">
+            <i class="material-icons">subscriptions</i>
+            <span>Subscriptions</span>
+          </div>
+        </div>
+        <hr />
+        <div class="sidebar_category">
+          <i class="material-icons">library_add_check</i>
+          <span>Library</span>
+        </div>
+        <div class="sidebar_category">
+          <i class="material-icons">history</i>
+          <span>History</span>
+        </div>
+        <div class="sidebar_category">
+          <i class="material-icons">play_arrow</i>
+          <span>Your Videos</span>
+        </div>
+        <div class="sidebar_category">
+          <i class="material-icons">watch_later</i>
+          <span>Watch Later</span>
+        </div>
+        <div class="sidebar_category">
+          <i class="material-icons">thumb_up</i>
+          <span>Liked Videos</span>
+        </div>
+      </div>
+      <hr />
+    </div>
+   
+
+    <div class="head-items">
+      <button>All</button>
+      <button>Music</button>
+      <button>Live</button>
+      <button>Colleges</button>
+      <button>Recuirement</button>
+      <button>Computer programming</button>
+      <button>Kitchens</button>
+      <button>Comedy</button>
+      <button>New to you</button>
+      <button>culinary Arts</button>
+      <button>Mixes</button>
+      <button>News</button>
+      <button>Juke box</button>
+      <button>Debate</button>
+      </div>
+    
+      <div class="video-wrapper">
+     <!-- <div class="video">
+      
+    </div> -->
+    
+   </div>
+    
+   
+   
+   <script src="video.js" defer></script>
+   
+    <!-- <script src="video.js"></script> -->
+      <script>
+      var menuIcon = document.querySelector("#menu-icon");
+      console.log("menu-icon", menuIcon);
+      var sidebar = document.querySelector(".sidebar");
+
+      // var videowrapper=document.querySelector(".video-wrapper");
+       menuIcon.onclick = function () {
+        sidebar.classList.toggle("smaller-sidebar");
+        // 
+       }; 
+      const headButtons = document.querySelectorAll(".head-items button");
+
+headButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const category = button.getAttribute("data-category");
+    fetchCategoryVideos(category);
+  });
+});
+
+
+
+
+
+
+       
+       </script>
+      </body>
+   </html>
